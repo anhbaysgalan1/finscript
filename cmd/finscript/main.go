@@ -6,20 +6,20 @@ import (
 
 	"github.com/antlr4-go/antlr/v4"
 
-	. "github.com/anhbaysgalan1/finscript" // Add this line to import SendStmtAST
-	"github.com/anhbaysgalan1/finscript/parser"
+	"github.com/anhbaysgalan1/finscript/pkg/ast"
+	"github.com/anhbaysgalan1/finscript/pkg/parser"
 )
 
 // A custom listener that collects the program's "send" statements into AST
 type FinscriptListener struct {
 	*parser.BaseFinscriptListener
-	ASTNodes []SendStmtAST
+	ASTNodes []ast.SendStmtAST
 
-	currentSend SendStmtAST
+	currentSend ast.SendStmtAST
 }
 
 func (l *FinscriptListener) EnterSendStmt(ctx *parser.SendStmtContext) {
-	l.currentSend = SendStmtAST{}
+	l.currentSend = ast.SendStmtAST{}
 }
 func (l *FinscriptListener) ExitSendStmt(ctx *parser.SendStmtContext) {
 	// Example: ctx.ASSET(0) is the token

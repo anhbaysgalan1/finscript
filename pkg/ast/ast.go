@@ -1,4 +1,4 @@
-package main
+package ast
 
 // AST for "send [ASSET AMOUNT] ( source=... destination=... )"
 
@@ -17,11 +17,13 @@ type SourceAST interface {
 type SingleSrc struct {
 	Account string
 }
+
 func (SingleSrc) srcNode() {}
 
 type InorderSrc struct {
 	Sources []SourceAST
 }
+
 func (InorderSrc) srcNode() {}
 
 // DestAST can be a single account or an allotment block
@@ -32,11 +34,13 @@ type DestAST interface {
 type SingleDest struct {
 	Account string
 }
+
 func (SingleDest) destNode() {}
 
 type AllotmentDest struct {
 	Items []AllotmentItem
 }
+
 func (AllotmentDest) destNode() {}
 
 // Each allotment item can be "portion -> account" or "remaining -> account"
