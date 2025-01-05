@@ -1,0 +1,84 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Database files
+*.db
+*.sqlite
+
+# MongoDB data directory
+data/mongodb/
+
+# PostgreSQL data directory
+data/postgres/
+
+# Temporary files
+tmp/
+temp/
+
+# Build output
+dist/
+build/
+
+# Debug files
+debug/
+
+# Certificate files
+*.pem
+*.key
+*.crt
+
+# Docker volumes
+docker/volumes/
+
+# Cache directories
+.cache/
+
+# Air live reload
+tmp/
+
+# Swagger files
+swagger.json
+swagger.yaml
+
+# Test coverage
+coverage.txt
+coverage.html
+
+# Project specific
+config.yaml
+config.yml
+!config.example.yaml
+!config.example.yml 

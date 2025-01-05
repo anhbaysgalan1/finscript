@@ -1,0 +1,15 @@
+send [USD/2 599] (
+  source = @world
+  destination = @bob
+)
+
+send [USD/2 *] (
+  source = {
+    @alice,
+    @charity
+  }
+  destination = {
+    50% to @drivers
+    remaining to @platform
+  }
+)

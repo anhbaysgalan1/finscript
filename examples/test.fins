@@ -1,0 +1,15 @@
+send [MNT/2 600] (
+  source = @world
+  destination = @anhaa
+)
+
+send [MNT/2 *] (
+  source = {
+    @boldoo,
+    @suvdaa
+  }
+  destination = {
+    50% to @drivers
+    remaining to @platform
+  }
+)
